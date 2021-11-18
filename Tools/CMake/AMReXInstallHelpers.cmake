@@ -5,6 +5,7 @@ function ( generate_amrex_config_header )
 
    get_target_property(_defines amrex COMPILE_DEFINITIONS)
    evaluate_genex(_defines _defines_list )
+   message("defines:: ${_defines_list}")
 
    # set variables from list of defines
    # configure_file() will use these variables to

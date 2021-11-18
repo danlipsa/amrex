@@ -168,6 +168,10 @@ print_option( ENABLE_DP_PARTICLES )
 option( ENABLE_SENSEI_INSITU "Enable SENSEI in situ infrastructure" OFF )
 print_option( ENABLE_SENSEI_INSITU )
 
+# catalyst
+option( ENABLE_CATALYST_INSITU "Enable CATALYST in situ infrastructure" OFF )
+print_option( ENABLE_CATALYST_INSITU )
+
 # Conduit (requires CONDUIT_DIR)
 option( ENABLE_CONDUIT "Enable Conduit support" OFF )
 print_option( ENABLE_CONDUIT )

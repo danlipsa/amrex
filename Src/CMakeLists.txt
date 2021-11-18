@@ -69,6 +69,16 @@ add_subdirectory(Boundary)
 add_subdirectory(AmrCore)
 add_subdirectory(Amr)
 
+##Soumya Adding slic
+add_subdirectory(SLIC)
+target_link_libraries(amrex PUBLIC $<BUILD_INTERFACE:Flags_Fortran_REQUIRED>)
+
+
+##Soumya Adding SLIC_vtkm
+#add_subdirectory(SLIC_vtkm)
+#target_link_libraries(amrex PUBLIC $<BUILD_INTERFACE:Flags_Fortran_REQUIRED>)
+
+
 #
 # Optional components
 #
@@ -146,6 +156,11 @@ endif ()
 
 if (ENABLE_SENSEI_INSITU)
    add_subdirectory(Extern/SENSEI)
+endif ()
+
+if (ENABLE_CATALYST_INSITU)
+   message("Enable Catalyst")
+   add_subdirectory(Extern/Catalyst)
 endif ()
 
 if (ENABLE_SUNDIALS)

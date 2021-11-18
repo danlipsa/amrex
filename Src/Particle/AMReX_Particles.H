@@ -63,6 +63,7 @@
 #include <hdf5.h>
 #endif
 
+
 namespace amrex {
 
 /**
@@ -436,6 +437,12 @@ public:
     void InitFromBinaryFile (const std::string& file, int extradata);
 
     void InitFromBinaryMetaFile (const std::string& file, int extradata);
+
+    //soumya added function for insitu processing starts here
+
+    double rtclock();
+
+    //soumya added function for insitu processing ends here
 
     /**
     * \brief 

@@ -1,3 +1,4 @@
+#include <AMReX_Particles.H> //soumya added
 
 template <int NStructReal, int NStructInt, int NArrayReal, int NArrayInt>
 bool
@@ -2169,3 +2170,12 @@ InterpolateSingleLevel (MultiFab& mesh_data, int lev)
         });
     }
 }
+
+///////////////////////////////////////////////////////
+//// In situ processing codes start here: soumya
+///////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////
+//// In situ processing codes end here: soumya
+////////////////////////////////////////////////////////

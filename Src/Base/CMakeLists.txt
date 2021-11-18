@@ -23,8 +23,8 @@ endif ()
 # We need threads
 set( THREADS_PREFER_PTHREAD_FLAG on)
 find_package(Threads REQUIRED)
-set_target_properties( Threads::Threads PROPERTIES IMPORTED_GLOBAL True )
-target_link_libraries(amrex PUBLIC Threads::Threads)
+#set_target_properties( Threads::Threads PROPERTIES IMPORTED_GLOBAL True )
+target_link_libraries(amrex PUBLIC Threads::Threads) ## soumya commented to compile with CUDA enabled vtkm
 
 
 target_sources( amrex
